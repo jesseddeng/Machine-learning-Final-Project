@@ -1,4 +1,12 @@
-Flask==0.10.1
-flask_wtf=0.12
-numpy==1.10.4
-scikit-learn==0.17.1
+Click==7.0
+Flask==1.0.2
+Flask-WTF==0.14.2
+gunicorn==19.9.0
+itsdangerous==1.1.0
+Jinja2==2.10
+MarkupSafe==1.1.0
+numpy==1.15.4
+scikit-learn==0.20.1
+scipy==1.1.0
+Werkzeug==0.14.1
+WTForms==2.2.1
