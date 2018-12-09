@@ -114,13 +114,7 @@ def index():
         
         prediction=my_prediction
     
-        # Return only the Predicted iris species
-        #prediction = target_names[my_prediction].capitalize()
-
-        #if sepal_length==1:
-        #   prediction="my_prediction"
-        #else:
-        #    prediction="aaa"+str(sepal_length)
+    
     
         
  
