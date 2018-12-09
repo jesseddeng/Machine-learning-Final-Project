@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block body %}
+  <section class="header">
+    <h2 class="title">AirBnB Pricing Prediction!</h2>
+  </section>
+  <hr />
+
+  <div class="content">
+    <h1>
+      {% if prediction %}
+      Prediction Price: ${{ prediction }}.
+      {% else %}
+        Please fill out the form below!
+      {% endif %}
+    </h1>
+    <form method="POST">
+      {{ form.hidden_tag() }}
+      <div class="row">
+        <div class="three columns">
+          {{ form.latitude.label }} {{ form.latitude() }}
+        </div>
+        <div class="three columns">
+          {{ form.longitude.label }} {{ form.longitude() }}
+        </div>
+        <div class="three columns">
+          {{ form.property_type.label }} {{ form.property_type() }}
+        </div>
+        <div class="three columns">
+          {{ form.room_type.label }} {{ form.room_type() }}
+        </div>
+        <div class="three columns">
+          {{ form.accommodates.label }} {{ form.accommodates() }}
+        </div>
+        <div class="three columns">
+          {{ form.bathrooms.label }} {{ form.bathrooms() }}
+        </div>
+        <div class="three columns">
+          {{ form.bedrooms.label }} {{ form.bedrooms() }}
+        </div>
+        <div class="three columns">
+          {{ form.beds.label }} {{ form.beds() }}
+        </div>
+        <div class="three columns">
+          {{ form.review_scores_mean.label }} {{ form.review_scores_mean() }}
+        </div>
+      </div>
+      <div class="row">
+        <button type="submit" class="button-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+{% endblock body %}
+
+{% block js %}
+  <script type="text/javascript">
+
+  </script>
+{% endblock js %}
