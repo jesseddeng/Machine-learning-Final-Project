@@ -54,7 +54,7 @@ class PredictForm(FlaskForm):
     )
 
     room_type = SelectField(
-        'Review Scores Mean:',
+        'Room Type:',
         choices=[('1', 'Private room'), ('0', 'Entire home/apt'), ('2', 'Shared room')]
     )
 
@@ -105,16 +105,11 @@ def index():
 
         # Create array from values
         instance = [latitude,longitude,property_type,room_type,accommodates,bathrooms,bedrooms,beds,review_scores_mean]
-        #instance=[40.75038236, -73.90333918,1,1,2,1,1,1,9.83333333]
+
         instance=[instance]
         
         prediction = estimator.predict(instance)
-        
-        #my_prediction=np.exp(int(prediction[0]))
-        
         prediction =np.exp(prediction[0])
-
-        #prediction=np.exp(prediction)
     
     
     
