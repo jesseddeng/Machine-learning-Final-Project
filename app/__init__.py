@@ -6,7 +6,7 @@ app = Flask(__name__)
 app.config.from_object("app.config")
 
 
-estimator = joblib.load('models\predicted.pkl')
+estimator = joblib.load('predicted.pkl')
 
 
 
