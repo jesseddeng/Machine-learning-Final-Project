@@ -109,7 +109,7 @@ def index():
         instance=[instance]
         
         prediction = estimator.predict(instance)
-        prediction = np.around(np.exp(prediction[0],2))
+        prediction = np.around(np.exp(prediction[0]),2)
     
     
     
