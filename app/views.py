@@ -83,6 +83,8 @@ def index():
     """Index page"""
     form = PredictForm()
     prediction = None
+    urls=None
+    iframe = None
 
     if form.validate_on_submit():
         # store the submitted values
@@ -113,6 +115,10 @@ def index():
     
     
     
-        
+   
+
  
     return render_template('index.html', form=form, prediction=prediction)
+@app.route('/geo.html')
+def main():
+    return render_template('geo.html')
